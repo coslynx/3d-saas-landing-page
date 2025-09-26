@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Reset browser defaults */
+body,
+h1, h2, h3, h4, h5, h6,
+p, ul, ol, li,
+figure, figcaption {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+/* Set default font family and text color */
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+/* Define container styles */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Responsive container */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Base typography styles */
+h1 {
+  font-size: 3.0rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2.0rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h4 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h6 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: theme('colors.blue.500');
+  text-decoration: none;
+  transition: color 150ms ease-in-out;
+}
+
+a:hover {
+  color: theme('colors.blue.700');
+}
+
+a:focus-visible {
+    outline: 2px solid theme('colors.blue.500');
+    outline-offset: 2px;
+}
+
+/* 3D canvas integration */
+canvas {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Ensure hardware acceleration */
+  transform: translate3d(0, 0, 0);
+}
+
+/* Accessible focus styles */
+*:focus-visible {
+  outline: 2px solid theme('colors.blue.500');
+  outline-offset: 2px;
+}
+
+/* Smooth transition properties */
+.transition-default {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
+
+.transition-hover {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 150ms;
+}
